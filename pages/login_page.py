@@ -2,9 +2,9 @@
 class LoginPage:
     def __init__(self, page):
         self.page = page
-        self.username = page.get_by_name("user-name")
-        self.password = page.get_by_name("password")
-        self.login_button = page.get_by_name("login-button")
+        self.username = page.locator("#user-name")
+        self.password = page.locator("#password")
+        self.login_button = page.locator("#login-button")
 
     def load(self):
         self.page.goto("https://www.saucedemo.com")

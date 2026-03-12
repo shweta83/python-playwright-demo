@@ -1,8 +1,10 @@
 import pytest
 
 # Pytest Fixtures
-"pytest_fixtures/core/browser"
-"pytest_fixtures/core/page"
+pytest_plugins = [
+    "pytest_fixtures.core",
+]
+
 
 @pytest.hookimpl(hookwrapper=True)
 def pytest_runtest_makereport(item):
